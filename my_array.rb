@@ -30,7 +30,7 @@ class MyArray
   end
 
   def odd
-    @array.select { |number| number % 2 == 1 }
+    @array.select { |number| number % 2 > 0 }
   end
 
   def multiple_to_three
@@ -51,9 +51,12 @@ class MyArray
   end
 
   def switch
-    max = @array.index(@array.max)
-    min = @array.index(@array.min)
-    @array[max], @array[min] = @array.min, @array.max
+    max_n = @array.index(@array.max)
+    min_n = @array.index(@array.min)
+    max = @array.max
+    min = @array.min
+    @array[max_n] = min
+    @array[min_n] = max
     @array
   end
 
