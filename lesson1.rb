@@ -20,7 +20,9 @@ class Lesson1
   end
 
   def name
-    name = gets.chomp
-    "Hello #{name} Super Man!"
+    firstname = gets.chomp
+    lastname = gets.chomp
+    patronymic = gets.chomp
+    "Hello #{firstname} #{lastname} #{patronymic}!"
   end
 end
